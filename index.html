@@ -36,16 +36,6 @@
             color: #24282A;
         }
 
-        a {
-            color: #231372;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        a:hover {
-            color: #20E2C8;
-        }
-
         /* --- Header e Logo --- */
         .header {
             background-color: #ffffff;
@@ -79,7 +69,7 @@
             color: #231372;
             font-size: 1.1em;
             display: block;
-            margin-top: 10px;
+            margin: 10px 0 5px 0;
         }
         
         strong.total-price {
@@ -97,24 +87,25 @@
         }
         
         /* --- Novos Estilos para Breakdown --- */
-        .discount-ratio {
+        .disclaimer {
             font-size: 0.9em;
             font-style: italic;
             color: #555;
-            display: block;
-            margin-bottom: 8px;
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 1em;
+            border-radius: 5px;
+            margin-bottom: 1.5em;
         }
-        .calc-price {
-            color: #6106AF;
+        
+        .list-value {
+            color: #24282A;
             font-weight: 700;
             font-family: 'Figtree', sans-serif;
+            font-style: italic;
+            font-size: 0.95em;
         }
-        .original-value {
-            text-decoration: line-through;
-            color: #777;
-            font-size: 0.9em;
-            padding: 0 5px;
-        }
+
         td li {
             margin-bottom: 8px;
             font-size: 0.95em;
@@ -317,7 +308,7 @@
                 <path id="Caminho_397-2" data-name="Caminho 397-2" class="cls-4" d="M534.29,207.26c0,.51-.4.92-.9.93-.02,0-.03,0-.05,0h-7.12c-.29.02-.58-.06-.82-.23-.27-.24-.48-.52-.63-.85l-5.1-9.81h-3.55v9.62c.02.34-.11.68-.35.93-.26.23-.61.35-.96.33h-6.1c-.34.02-.67-.1-.92-.33-.23-.25-.34-.59-.32-.93v-32.29c-.01-.34.11-.66.35-.9.23-.24.56-.37.89-.36h12.22c2.26-.04,4.49.47,6.5,1.49,1.85.95,3.38,2.42,4.42,4.23,1.09,1.94,1.64,4.14,1.59,6.36.03,2.04-.46,4.06-1.42,5.86-.92,1.71-2.29,3.13-3.96,4.12l6.1,11.31c.1.16.14.34.14.52M516.12,189.85h4.45c.77.01,1.52-.2,2.18-.6.64-.39,1.16-.95,1.51-1.62.37-.69.56-1.46.55-2.24.01-.76-.18-1.51-.55-2.18-.35-.63-.88-1.15-1.51-1.5-.67-.36-1.42-.55-2.18-.53h-4.45v8.67Z"/>
                 <path id="Caminho_398-2" data-name="Caminho 398-2" class="cls-4" d="M561.13,174.64c-.02-.34.1-.68.33-.93.25-.23.59-.35.93-.33h23.24c.34-.02.68.1.93.33.23.25.35.59.33.93v5.74c.02.35-.1.68-.33.94-.25.24-.58.37-.93.35h-7.31v25.55c.02.35-.1.69-.33.94-.26.23-.6.35-.95.32h-6.1c-.64.06-1.2-.4-1.26-1.04,0-.07,0-.15,0-.22v-25.55h-7.29c-.34.02-.68-.1-.93-.35-.23-.26-.35-.6-.33-.94v-5.74Z"/>
                 <path id="Caminho_399-2" data-name="Caminho 399-2" class="cls-4" d="M623.9,207.24c.07.44-.23.86-.68.93-.07.01-.15.01-.22,0h-6.79c-.46.06-.87-.27-.93-.73,0-.07,0-.14,0-.2v-32.94c-.06-.44.26-.85.7-.9.07,0,.15,0,.22,0h6.79c.44-.06.84.25.9.69,0,.07,0,.14,0,.21v32.94Z"/>
-                <path id="Caminho_400-2" data-name="Caminho 400-2" class="cls-4" d="M652.91,204.31c.01-.3.1-.6.26-.86l2.81-5.05c.2-.41.62-.67,1.07-.67.27.01.54.08.79.19,1.47.68,2.99,1.24,4.55,1.68,1.51.41,3.06.61,4.62.61,1.06.03,2.12-.21,3.06-.7.75-.34,1.24-1.07,1.25-1.89,0-.58-.25-1.13-.7-1.5-.6-.49-1.27-.86-2-1.12-.87-.33-2.09-.73-3.66-1.19-2.07-.58-4.08-1.36-6-2.34-1.43-.74-2.65-1.83-3.54-3.18-.87-1.47-1.29-3.15-1.22-4.86-.05-2.05.57-4.07,1.76-5.74,1.2-1.62,2.82-2.88,4.69-3.63,2.01-.83,4.17-1.25,6.35-1.23,1.47,0,2.94.17,4.37.5,1.37.3,2.71.73,4.01,1.26,1.03.42,2.02.93,2.95,1.52.41.21.68.62.71,1.07-.03.32-.13.63-.31.9l-2.83,5.14c-.17.38-.56.62-.98.62-.37-.02-.73-.13-1.05-.31-1.18-.62-2.41-1.14-3.68-1.56-1.23-.37-2.51-.55-3.8-.54-.91-.02-1.81.2-2.6.64-.64.29-1.07.92-1.1,1.62,0,.7.47,1.3,1.41,1.8,1.45.69,2.97,1.25,4.53,1.65,2.14.6,4.22,1.37,6.24,2.3,1.52.71,2.84,1.79,3.83,3.14,1.03,1.52,1.53,3.33,1.45,5.16.04,2.1-.58,4.15-1.79,5.87-1.23,1.71-2.91,3.04-4.86,3.85-2.15.91-4.46,1.36-6.79,1.33-2.35,0-4.68-.31-6.95-.9-2.2-.56-4.31-1.43-6.26-2.6-.38-.19-.61-.58-.62-1"/>
+D M652.91,204.31c.01-.3.1-.6.26-.86l2.81-5.05c.2-.41.62-.67,1.07-.67.27.01.54.08.79.19,1.47.68,2.99,1.24,4.55,1.68,1.51.41,3.06.61,4.62.61,1.06.03,2.12-.21,3.06-.7.75-.34,1.24-1.07,1.25-1.89,0-.58-.25-1.13-.7-1.5-.6-.49-1.27-.86-2-1.12-.87-.33-2.09-.73-3.66-1.19-2.07-.58-4.08-1.36-6-2.34-1.43-.74-2.65-1.83-3.54-3.18-.87-1.47-1.29-3.15-1.22-4.86-.05-2.05.57-4.07,1.76-5.74,1.2-1.62,2.82-2.88,4.69-3.63,2.01-.83,4.17-1.25,6.35-1.23,1.47,0,2.94.17,4.37.5,1.37.3,2.71.73,4.01,1.26,1.03.42,2.02.93,2.95,1.52.41.21.68.62.71,1.07-.03.32-.13.63-.31.9l-2.83,5.14c-.17.38-.56.62-.98.62-.37-.02-.73-.13-1.05-.31-1.18-.62-2.41-1.14-3.68-1.56-1.23-.37-2.51-.55-3.8-.54-.91-.02-1.81.2-2.6.64-.64.29-1.07.92-1.1,1.62,0,.7.47,1.3,1.41,1.8,1.45.69,2.97,1.25,4.53,1.65,2.14.6,4.22,1.37,6.24,2.3,1.52.71,2.84,1.79,3.83,3.14,1.03,1.52,1.53,3.33,1.45,5.16.04,2.1-.58,4.15-1.79,5.87-1.23,1.71-2.91,3.04-4.86,3.85-2.15.91-4.46,1.36-6.79,1.33-2.35,0-4.68-.31-6.95-.9-2.2-.56-4.31-1.43-6.26-2.6-.38-.19-.61-.58-.62-1"/>
                 <path id="Caminho_401-2" data-name="Caminho 401-2" class="cls-4" d="M717.37,207.24c.07.44-.23.86-.68.93-.08.01-.15.01-.23,0h-6.79c-.46.06-.87-.27-.93-.73,0-.07,0-.14,0-.2v-32.94c-.06-.44.26-.85.7-.9.07,0,.15,0,.22,0h6.79c.44-.06.84.24.9.68.01.07.01.15,0,.22v32.94Z"/>
                 <path id="Caminho_402-2" data-name="Caminho 402-2" class="cls-4" d="M778.6,173.61c.17.19.26.44.24.69v32.96c.02.26-.07.51-.25.69-.19.17-.43.25-.68.24h-6.48c-.75,0-1.45-.41-1.81-1.07l-13.38-20.36v20.5c.02.25-.07.51-.25.69-.19.17-.43.25-.68.24h-6.79c-.25.01-.49-.07-.68-.24-.18-.18-.27-.44-.25-.69v-32.95c-.02-.25.07-.51.25-.69.19-.17.43-.25.68-.24h7.03c.75.04,1.42.46,1.79,1.12l12.88,19.15v-19.34c-.02-.25.07-.5.24-.69.18-.17.42-.25.67-.24h6.79c.25-.02.5.07.69.24"/>
                 <path id="Caminho_403-2" data-name="Caminho 403-2" class="cls-4" d="M827.49,200.03c.61-.16,1.2-.37,1.76-.66v-6.14c-.01-.34.12-.67.37-.91.24-.23.56-.36.89-.36h5.98c.32,0,.64.13.86.37.23.24.36.56.36.89v11.36c0,.26-.07.51-.19.74-.1.23-.27.42-.48.55-1.63.97-3.4,1.7-5.25,2.14-1.96.55-3.98.85-6.01.88-3.24.03-6.43-.79-9.24-2.4-2.75-1.56-5.04-3.82-6.63-6.55-1.63-2.77-2.47-5.93-2.44-9.15-.04-6.48,3.42-12.47,9.05-15.67,2.81-1.61,6-2.44,9.24-2.41,1.91.02,3.81.34,5.62.94,1.76.51,3.41,1.35,4.86,2.47.33.23.53.62.52,1.02,0,.24-.07.47-.22.67l-3.5,5.26c-.19.32-.53.51-.91.5-.3,0-.59-.1-.81-.31-.78-.65-1.68-1.13-2.64-1.44-.93-.33-1.92-.5-2.91-.51-1.71-.02-3.39.42-4.88,1.26-1.45.82-2.66,2-3.5,3.44-1.71,2.96-1.71,6.61,0,9.57.84,1.44,2.05,2.62,3.5,3.44,1.49.84,3.17,1.28,4.88,1.26.58-.02,1.16-.11,1.72-.27"/>
@@ -337,9 +328,13 @@
     <main>
         <h1>Análise de Patrocínio: <span class="highlight">SBC 2025 vs. 2026</span></h1>
         
-        <p>A análise abaixo detalha o custo proporcional de cada item nos pacotes de 2025 e 2026. Para isso, calculámos o rácio de desconto de cada pacote (Preço Final / Valor Original) e aplicámo-lo ao valor de cada item individual listado nos documentos.</p>
+        <p>Esta é uma análise comparativa do "valor de lista" (valor original) dos itens incluídos no acordo de 2025 e na proposta de 2026. Todos os valores foram convertidos para Euros (€) para uma comparação direta.</p>
+        
+        <div class="disclaimer">
+            <strong>Nota sobre a Conversão:</strong> Os documentos da proposta (especialmente de 2026) listam os valores dos itens em múltiplas moedas (`£`, `$`, `€`). Para apresentar tudo em Euros, usámos a taxa de câmbio implícita em cada pacote (ex: `Total de Lista em € / Total de Lista em £`). As propostas contêm inconsistências matemáticas nos totais, pelo que os valores em Euros (`~€`) para itens originalmente em `£` são as melhores estimativas possíveis.
+        </div>
 
-        <h2>Tabela Comparativa: <span class="highlight">Breakdown de Custos</span></h2>
+        <h2>Tabela Comparativa: <span class="highlight">Valor de Lista (Original) em Euros</span></h2>
         
         <table>
             <thead>
@@ -353,32 +348,32 @@
                 <tr>
                     <td><strong>SBC Summit Rio</strong></td>
                     <td>
-                        <strong class="price-label">Custo: €48.500</strong>
-                        <span class="discount-ratio">(Pago 72.9% do valor original de €66.500)</span>
+                        <strong class="price-label">Preço Pago: €48.500</strong>
+                        <span class="list-value">Valor de Lista Total: €66.500</span>
                         <ul>
-                            <li>Booth 9x6m (54 m²) <span class="original-value">(€38.500)</span> <span class="calc-price">-> €28.079</span></li>
-                            <li>Stage Sponsor - Affiliate Leaders <span class="original-value">(€24.500)</span> <span class="calc-price">-> €17.868</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(€3.500)</span> <span class="calc-price">-> €2.553</span></li>
-                            <li>Oportunidade de Speaker <span class="original-value">(Complimentary)</span></li>
-                            <li>15 Admissões Complimentary</li>
+                            <li>Booth 9x6m (54 m²) <span class="list-value">(valor de €38.500)</span> [cite: 5]</li>
+                            <li>Stage Sponsor - Affiliate Leaders <span class="list-value">(valor de €24.500)</span> [cite: 11]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de €3.500)</span> [cite: 15]</li>
+                            <li>Oportunidade de Speaker <span class="list-value">(Complimentary)</span> [cite: 13]</li>
+                            <li>15 Admissões Complimentary [cite: 20]</li>
                         </ul>
                     </td>
                     <td>
                         <strong class="price-label">Pacote 1: €39.000</strong>
-                        <span class="discount-ratio">(Rácio de 76.5% de €51.000)</span>
+                        <span class="list-value">Valor de Lista Total: €51.000</span> [cite: 301]
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="original-value">(£41.400)</span> <span class="calc-price">-> £31.670</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.294</span></li>
-                            <li>8 Admissões Complimentary</li>
+                            <li>Main Conference Stage Sponsor <span class="list-value">(valor de ~€47.553)</span> [cite: 303]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de ~€3.446)</span> [cite: 309]</li>
+                            <li>8 Admissões Complimentary [cite: 314]</li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                         <strong class="price-label">Pacote 2: €47.000</strong>
-                        <span class="discount-ratio">(Rácio de 75.9% de €61.900)</span>
+                        <span class="list-value">Valor de Lista Total: €61.900</span> [cite: 321]
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="original-value">(€47.500)</span> <span class="calc-price">-> €36.066</span></li>
-                            <li>1x Private Meeting Room <span class="original-value">(£9.500)</span> <span class="calc-price">-> £7.213</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.278</span></li>
-                            <li>8 Admissões Complimentary</li>
+                            <li>Main Conference Stage Sponsor <span class="list-value">(valor de €47.500)</span> [cite: 323]</li>
+                            <li>1x Private Meeting Room <span class="list-value">(valor de ~€10.910)</span> [cite: 329]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de ~€3.445)</span> [cite: 344]</li>
+                            <li>8 Admissões Complimentary [cite: 349]</li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                     </td>
@@ -386,36 +381,34 @@
                 <tr>
                     <td><strong>SBC Summit Americas</strong></td>
                     <td>
-                        <strong class="price-label">Custo: £59.000 (€70.760)</strong>
-                        <span class="discount-ratio">(Pago 73.3% do valor original de £80.500)</span>
+                        <strong class="price-label">Preço Pago: €70.760</strong>
+                        <span class="list-value">Valor de Lista Total: ~€98.543</span> [cite: 25, 27, 30, 37, 42]
                         <ul>
-                            <li>Booth 6x6m (Premium) <span class="original-value">(£25.000)</span> <span class="calc-price">-> £18.323</span></li>
-                            <li>Stage 3 Sponsor - North America <span class="original-value">(£30.000)</span> <span class="calc-price">-> £21.988</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="original-value">(£22.500)</span> <span class="calc-price">-> £16.491</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.199</span></li>
-                            <li>Participação em Painel de Speaker <span class="original-value">(Complimentary)</span></li>
-                            <li>Convites C-Level Dinners (3 pessoas)</li>
+                            <li>Booth 6x6m (Premium) <span class="list-value">(valor de ~€29.982)</span> [cite: 27]</li>
+                            <li>Stage 3 Sponsor - North America <span class="list-value">(valor de ~€35.979)</span> [cite: 30]</li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="list-value">(valor de ~€26.984)</span> [cite: 37]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de ~€3.598)</span> [cite: 42]</li>
+                            <li>Participação em Painel de Speaker <span class="list-value">(Complimentary)</span> [cite: 42]</li>
                         </ul>
                     </td>
                     <td>
                         <strong class="price-label">Pacote Principal: €75.000</strong>
-                        <span class="discount-ratio">(Rácio de 66.7% de €112.500)</span>
+                        <span class="list-value">Valor de Lista Total: €112.500</span> [cite: 470]
                         <ul>
-                            <li>Gold Headline Sponsor <span class="original-value">(£32.000)</span> <span class="calc-price">-> £21.333</span></li>
-                            <li>Stage Sponsor - North America <span class="original-value">(£31.500)</span> <span class="calc-price">-> £21.000</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="original-value">(£26.500)</span> <span class="calc-price">-> £17.667</span></li>
-                            <li>Speaker Panel Participation <span class="original-value">(£8.000)</span> <span class="calc-price">-> £5.333</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(£4.000)</span> <span class="calc-price">-> £2.667</span></li>
-                            <li>Double page advert <span class="original-value">($4.000)</span> <span class="calc-price">-> $2.667</span></li>
-                            <li>Full page advert <span class="original-value">($3.000)</span> <span class="calc-price">-> $2.000</span></li>
+                            <li>Gold Headline Sponsor <span class="list-value">(valor de ~€36.736)</span> [cite: 472]</li>
+                            <li>Stage Sponsor - North America <span class="list-value">(valor de ~€36.162)</span> [cite: 486]</li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="list-value">(valor de ~€30.422)</span> [cite: 493]</li>
+                            <li>Speaker Panel Participation <span class="list-value">(valor de ~€9.184)</span> [cite: 500]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de ~€4.592)</span> [cite: 509]</li>
+                            <li>Anúncios em Dólar (Valor em € não fornecido) </li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                         <strong class="price-label">Pacote de Booth: €25.000</strong>
-                        <span class="discount-ratio">(Rácio de 78.1% de €32.000)</span>
+                        <span class="list-value">Valor de Lista Total: €32.000</span> [cite: 521]
                         <ul>
-                            <li>Booth 6x6m (Premium) <span class="original-value">(£28.000)</span> <span class="calc-price">-> £21.875</span></li>
+                            <li>Booth 6x6m (Premium) <span class="list-value">(valor de ~€32.000)</span> [cite: 523]</li>
                         </ul>
-                        <strong class="total-price">Custo Equivalente 2025 (Sponsor + Booth): €100.000</strong>
+                        <strong class="total-price">Valor de Lista Equivalente 2025: ~€144.500 (Sponsor + Booth)</strong>
                     </td>
                 </tr>
                 <tr>
@@ -426,40 +419,40 @@
                     </td>
                     <td>
                         <strong class="price-label">Pacote 1: €40.000</strong>
-                        <span class="discount-ratio">(Rácio de 65.8% de €60.800)</span>
+                        <span class="list-value">Valor de Lista Total: €60.800</span> [cite: 381]
                         <ul>
-                            <li>Stage 2 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.447</span></li>
-                            <li>Stage 3 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.447</span></li>
-                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £1.974</span></li>
-                            <li>10 Admissões Complimentary</li>
+                            <li>Stage 2 Sponsor <span class="list-value">(valor de ~€28.680)</span> [cite: 383]</li>
+                            <li>Stage 3 Sponsor <span class="list-value">(valor de ~€28.680)</span> [cite: 394]</li>
+                            <li>Supporting Event Sponsor <span class="list-value">(valor de ~€3.442)</span> [cite: 407]</li>
+                            <li>10 Admissões Complimentary [cite: 417]</li>
                         </ul>
                         <strong class="price-label">Pacote 2: €28.700</strong>
-                        <span class="discount-ratio">(Rácio de 65.8% de €43.620)</span>
+                        <span class="list-value">Valor de Lista Total: €43.620</span> [cite: 424]
                         <ul>
-                            <li>Stage 2 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.449</span></li>
-                            <li>Premium Sponsor <span class="original-value">(£13.000)</span> <span class="calc-price">-> £8.553</span></li>
-                            <li>Anúncio de página inteira <span class="original-value">(€2.000)</span> <span class="calc-price">-> €1.316</span></li>
-                            <li>10 Admissões Complimentary</li>
+                            <li>Stage 2 Sponsor <span class="list-value">(valor de ~€27.382)</span> [cite: 426]</li>
+                            <li>Premium Sponsor <span class="list-value">(valor de ~€14.239)</span> [cite: 437]</li>
+                            <li>Anúncio (Página inteira) <span class="list-value">(valor de €2.000)</span> [cite: 445]</li>
+                            <li>10 Admissões Complimentary [cite: 447]</li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>Análise Gráfica: <span class="highlight">Custos Totais dos Pacotes</span></h2>
+        <h2>Análise Gráfica: <span class="highlight">Custos Pagos (Pacotes)</span></h2>
         
-        <p>Os gráficos abaixo comparam os custos *totais* dos pacotes entre 2025 e 2026. A análise mais crítica é a do Americas, onde os entregáveis de 2025 foram divididos em dois pacotes separados em 2026, resultando num aumento de custo significativo para o mesmo nível de exposição.</p>
+        <p>Os gráficos abaixo comparam os custos *finais (pagos)* dos pacotes entre 2025 e 2026. A análise mais crítica é a do Americas, onde os entregáveis de 2025 foram divididos em dois pacotes separados em 2026, resultando num aumento de custo significativo para o mesmo nível de exposição.</p>
 
         <div class="chart-section">
             <div class="chart-container">
-                <h3 class="chart-title">Comparação de Custo: SBC Summit Americas<br>(Pacote Equivalente: Booth + Patrocínio de Palcos)</h3>
-                <p>Para replicar os entregáveis de 2025 (Booth + 2 Palcos) no Americas 2026, seria necessário adquirir ambos os pacotes (Principal + Booth), resultando num <strong>aumento de 41% (€29.240)</strong>.</p>
+                <h3 class="chart-title">Comparação de Custo PAGO: SBC Summit Americas<br>(Pacote Equivalente: Booth + Patrocínio de Palcos)</h3>
+                <p>Para replicar os entregáveis de 2025 (Booth + 2 Palcos) no Americas 2026, seria necessário adquirir ambos os pacotes (Principal + Booth), resultando num <strong>aumento de 41% (€29.240)</strong> no custo final.</p>
                 <div class="chart">
                     <div class="bar-group">
                         <div class="bar bar-2025" style="height: 70%;">
                             <div class="value">€70.760</div>
                         </div>
-                        <div class="bar-label">2025 (Total)</div>
+                        <div class="bar-label">2025 (Total Pago)</div>
                     </div>
                     
                     <div class="bar-group">
@@ -475,8 +468,8 @@
             </div>
 
             <div class="chart-container">
-                <h3 class="chart-title">Comparação de Custo: SBC Summit Rio<br>(Pacotes de Topo)</h3>
-                <p>A maior diferença no Rio é a <strong>ausência de um booth de exposição</strong> nos pacotes de 2026. Em 2025, o pacote incluía um booth de 54m². O Pacote 2 de 2026, embora com preço similar, substitui o booth por uma sala de reunião de 16m².</p>
+                <h3 class="chart-title">Comparação de Custo PAGO: SBC Summit Rio<br>(Pacotes de Topo)</h3>
+                <p>A maior diferença no Rio é a <strong>ausência de um booth de exposição</strong> nos pacotes de 2026. Em 2025, o pacote de €48.5k incluía um booth de 54m²[cite: 5]. O Pacote 2 de 2026 (€47k) substitui o booth por uma sala de reunião privada de 16m²[cite: 329, 333].</p>
                 <div class="chart">
                     <div class="bar-group">
                         <div class="bar bar-2025" style="height: 100%;">
@@ -496,30 +489,29 @@
         </div>
         
         <h2>Proposta: <span class="highlight">SBC Summit Malta 2026 (Novo)</span></h2>
-        <p>Este é um evento novo na proposta, não tendo comparação com o acordo de 2025. A proposta inclui dois pacotes principais, com os custos proporcionais dos itens já calculados na tabela acima.</p>
+        <p>Este é um evento novo na proposta. A proposta inclui dois pacotes principais (preços finais com desconto):</p>
         
         <div class="malta-packages">
             <div class="malta-card">
                 <h4>Pacote 1</h4>
-                <div class="price">€40.000</div>
+                <div class="price">€40.000 [cite: 381]</div>
                 <ul>
-                    <li>Stage 2 Sponsor <span class="calc-price">(~€19.220)</span>*</li>
-                    <li>Stage 3 Sponsor <span class="calc-price">(~€19.220)</span>*</li>
-                    <li>Supporting Event Sponsor <span class="calc-price">(~€2.306)</span>*</li>
+                    <li>Patrocínio do Stage 2 [cite: 383]</li>
+                    <li>Patrocínio do Stage 3 [cite: 394]</li>
+                    <li>Supporting Event Sponsor [cite: 407]</li>
                 </ul>
             </div>
             
             <div class="malta-card">
                 <h4>Pacote 2</h4>
-                <div class="price">€28.700</div>
+                <div class="price">€28.700 [cite: 424]</div>
                  <ul>
-                    <li>Stage 2 Sponsor <span class="calc-price">(~€19.224)</span>*</li>
-                    <li>Premium Sponsor <span class="calc-price">(~€10.000)</span>*</li>
-                    <li>Anúncio (Página inteira) <span class="calc-price">(~€1.316)</span></li>
+                    <li>Patrocínio do Stage 2 [cite: 426]</li>
+                    <li>Premium Sponsor [cite: 437]</li>
+                    <li>Anúncio (Página inteira) [cite: 445]</li>
                 </ul>
             </div>
         </div>
-        <p style="font-size: 0.8em; margin-top: 1em;">*Valores em £ convertidos para € para fins de estimativa, com base no rácio de desconto do pacote.</p>
 
     </main>
 
