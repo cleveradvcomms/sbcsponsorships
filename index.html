@@ -95,6 +95,35 @@
             color: #c1121f; /* Vermelho para "Sem Booth" */
             font-weight: 700;
         }
+        
+        /* --- Novos Estilos para Breakdown --- */
+        .discount-ratio {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .calc-price {
+            color: #6106AF;
+            font-weight: 700;
+            font-family: 'Figtree', sans-serif;
+        }
+        .original-value {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 0.9em;
+            padding: 0 5px;
+        }
+        td li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        td ul {
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
 
 
         /* --- Tabelas --- */
@@ -124,12 +153,6 @@
         th:first-child {
             width: 15%;
             color: #6106AF;
-        }
-        
-        td ul {
-            padding-left: 20px;
-            margin-top: 0;
-            margin-bottom: 10px;
         }
 
         /* --- Gráfico --- */
@@ -314,9 +337,9 @@
     <main>
         <h1>Análise de Patrocínio: <span class="highlight">SBC 2025 vs. 2026</span></h1>
         
-        <p>Esta é uma análise comparativa do acordo de patrocínio assinado para os eventos SBC de 2025 (Rio e Americas) e a nova proposta para os eventos de 2026 (Rio, Malta e Americas). O objetivo é entender as diferenças de custo e entregáveis.</p>
+        <p>A análise abaixo detalha o custo proporcional de cada item nos pacotes de 2025 e 2026. Para isso, calculámos o rácio de desconto de cada pacote (Preço Final / Valor Original) e aplicámo-lo ao valor de cada item individual listado nos documentos.</p>
 
-        <h2>Tabela Comparativa: <span class="highlight">2025 vs. 2026</span></h2>
+        <h2>Tabela Comparativa: <span class="highlight">Breakdown de Custos</span></h2>
         
         <table>
             <thead>
@@ -331,24 +354,30 @@
                     <td><strong>SBC Summit Rio</strong></td>
                     <td>
                         <strong class="price-label">Custo: €48.500</strong>
+                        <span class="discount-ratio">(Pago 72.9% do valor original de €66.500)</span>
                         <ul>
-                            <li><strong>Booth Space 9x6m (54 m²)</strong></li>
-                            <li>Stage Sponsor - Affiliate Leaders Summit</li>
-                            <li>Oportunidade de Speaker</li>
+                            <li>Booth 9x6m (54 m²) <span class="original-value">(€38.500)</span> <span class="calc-price">-> €28.079</span></li>
+                            <li>Stage Sponsor - Affiliate Leaders <span class="original-value">(€24.500)</span> <span class="calc-price">-> €17.868</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(€3.500)</span> <span class="calc-price">-> €2.553</span></li>
+                            <li>Oportunidade de Speaker <span class="original-value">(Complimentary)</span></li>
                             <li>15 Admissões Complimentary</li>
                         </ul>
                     </td>
                     <td>
                         <strong class="price-label">Pacote 1: €39.000</strong>
+                        <span class="discount-ratio">(Rácio de 76.5% de €51.000)</span>
                         <ul>
-                            <li>Main Conference Stage Sponsor (Stage 1)</li>
+                            <li>Main Conference Stage Sponsor <span class="original-value">(£41.400)</span> <span class="calc-price">-> £31.670</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.294</span></li>
                             <li>8 Admissões Complimentary</li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                         <strong class="price-label">Pacote 2: €47.000</strong>
+                        <span class="discount-ratio">(Rácio de 75.9% de €61.900)</span>
                         <ul>
-                            <li>Main Conference Stage Sponsor (Stage 1)</li>
-                            <li><strong>1x Private Meeting Room (4x4m)</strong></li>
+                            <li>Main Conference Stage Sponsor <span class="original-value">(€47.500)</span> <span class="calc-price">-> €36.066</span></li>
+                            <li>1x Private Meeting Room <span class="original-value">(£9.500)</span> <span class="calc-price">-> £7.213</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.278</span></li>
                             <li>8 Admissões Complimentary</li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
@@ -357,31 +386,36 @@
                 <tr>
                     <td><strong>SBC Summit Americas</strong></td>
                     <td>
-                        <strong class="price-label">Custo: €70.760</strong>
+                        <strong class="price-label">Custo: £59.000 (€70.760)</strong>
+                        <span class="discount-ratio">(Pago 73.3% do valor original de £80.500)</span>
                         <ul>
-                            <li><strong>Booth 6x6m (Premium)</strong></li>
-                            <li><strong>Stage 3 Sponsor - North America</strong></li>
-                            <li><strong>Affiliate Leaders Stage Sponsor</strong></li>
-                            <li>Participação em Painel de Speaker</li>
+                            <li>Booth 6x6m (Premium) <span class="original-value">(£25.000)</span> <span class="calc-price">-> £18.323</span></li>
+                            <li>Stage 3 Sponsor - North America <span class="original-value">(£30.000)</span> <span class="calc-price">-> £21.988</span></li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="original-value">(£22.500)</span> <span class="calc-price">-> £16.491</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £2.199</span></li>
+                            <li>Participação em Painel de Speaker <span class="original-value">(Complimentary)</span></li>
                             <li>Convites C-Level Dinners (3 pessoas)</li>
-                            <li>8 Admissões Complimentary</li>
                         </ul>
                     </td>
                     <td>
                         <strong class="price-label">Pacote Principal: €75.000</strong>
+                        <span class="discount-ratio">(Rácio de 66.7% de €112.500)</span>
                         <ul>
-                            <li>Gold Headline Sponsor</li>
-                            <li><strong>Stage Sponsor - North America</strong></li>
-                            <li><strong>Affiliate Leaders Stage Sponsor</strong></li>
-                            <li>Participação em Painel de Speaker</li>
-                            <li>Convites C-level dinners (3 pessoas)</li>
+                            <li>Gold Headline Sponsor <span class="original-value">(£32.000)</span> <span class="calc-price">-> £21.333</span></li>
+                            <li>Stage Sponsor - North America <span class="original-value">(£31.500)</span> <span class="calc-price">-> £21.000</span></li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="original-value">(£26.500)</span> <span class="calc-price">-> £17.667</span></li>
+                            <li>Speaker Panel Participation <span class="original-value">(£8.000)</span> <span class="calc-price">-> £5.333</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(£4.000)</span> <span class="calc-price">-> £2.667</span></li>
+                            <li>Double page advert <span class="original-value">($4.000)</span> <span class="calc-price">-> $2.667</span></li>
+                            <li>Full page advert <span class="original-value">($3.000)</span> <span class="calc-price">-> $2.000</span></li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                         <strong class="price-label">Pacote de Booth: €25.000</strong>
+                        <span class="discount-ratio">(Rácio de 78.1% de €32.000)</span>
                         <ul>
-                            <li><strong>Booth 6x6m (Premium)</strong></li>
+                            <li>Booth 6x6m (Premium) <span class="original-value">(£28.000)</span> <span class="calc-price">-> £21.875</span></li>
                         </ul>
-                        <strong class="total-price">Custo Equivalente (Sponsor + Booth): €100.000</strong>
+                        <strong class="total-price">Custo Equivalente 2025 (Sponsor + Booth): €100.000</strong>
                     </td>
                 </tr>
                 <tr>
@@ -392,16 +426,19 @@
                     </td>
                     <td>
                         <strong class="price-label">Pacote 1: €40.000</strong>
+                        <span class="discount-ratio">(Rácio de 65.8% de €60.800)</span>
                         <ul>
-                            <li>Stage 2 Sponsor</li>
-                            <li>Stage 3 Sponsor</li>
+                            <li>Stage 2 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.447</span></li>
+                            <li>Stage 3 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.447</span></li>
+                            <li>Supporting Event Sponsor <span class="original-value">(£3.000)</span> <span class="calc-price">-> £1.974</span></li>
                             <li>10 Admissões Complimentary</li>
                         </ul>
                         <strong class="price-label">Pacote 2: €28.700</strong>
+                        <span class="discount-ratio">(Rácio de 65.8% de €43.620)</span>
                         <ul>
-                            <li>Stage 2 Sponsor</li>
-                            <li>Premium Sponsor</li>
-                            <li>Anúncio de página inteira</li>
+                            <li>Stage 2 Sponsor <span class="original-value">(£25.000)</span> <span class="calc-price">-> £16.449</span></li>
+                            <li>Premium Sponsor <span class="original-value">(£13.000)</span> <span class="calc-price">-> £8.553</span></li>
+                            <li>Anúncio de página inteira <span class="original-value">(€2.000)</span> <span class="calc-price">-> €1.316</span></li>
                             <li>10 Admissões Complimentary</li>
                         </ul>
                     </td>
@@ -409,9 +446,9 @@
             </tbody>
         </table>
 
-        <h2>Análise Gráfica e <span class="highlight">Destaques</span></h2>
+        <h2>Análise Gráfica: <span class="highlight">Custos Totais dos Pacotes</span></h2>
         
-        <p>A análise foca-se nas principais diferenças de custo e entregáveis para os eventos comparáveis (Rio e Americas) e apresenta o novo evento (Malta).</p>
+        <p>Os gráficos abaixo comparam os custos *totais* dos pacotes entre 2025 e 2026. A análise mais crítica é a do Americas, onde os entregáveis de 2025 foram divididos em dois pacotes separados em 2026, resultando num aumento de custo significativo para o mesmo nível de exposição.</p>
 
         <div class="chart-section">
             <div class="chart-container">
@@ -459,32 +496,30 @@
         </div>
         
         <h2>Proposta: <span class="highlight">SBC Summit Malta 2026 (Novo)</span></h2>
-        <p>Este é um evento novo na proposta, não tendo comparação com o acordo de 2025. A proposta inclui dois pacotes principais:</p>
+        <p>Este é um evento novo na proposta, não tendo comparação com o acordo de 2025. A proposta inclui dois pacotes principais, com os custos proporcionais dos itens já calculados na tabela acima.</p>
         
         <div class="malta-packages">
             <div class="malta-card">
                 <h4>Pacote 1</h4>
                 <div class="price">€40.000</div>
                 <ul>
-                    <li>Stage 2 Sponsor</li>
-                    <li>Stage 3 Sponsor</li>
-                    <li>Supporting Event Sponsor</li>
-                    <li>10 Admissões Complimentary</li>
+                    <li>Stage 2 Sponsor <span class="calc-price">(~€19.220)</span>*</li>
+                    <li>Stage 3 Sponsor <span class="calc-price">(~€19.220)</span>*</li>
+                    <li>Supporting Event Sponsor <span class="calc-price">(~€2.306)</span>*</li>
                 </ul>
             </div>
             
             <div class="malta-card">
                 <h4>Pacote 2</h4>
                 <div class="price">€28.700</div>
-                <ul>
-                    <li>Stage 2 Sponsor</li>
-                    <li>Premium Sponsor</li>
-                    <li>Anúncio de página inteira</li>
-                    <li>Convite VIP C-level dinner</li>
-                    <li>10 Admissões Complimentary</li>
+                 <ul>
+                    <li>Stage 2 Sponsor <span class="calc-price">(~€19.224)</span>*</li>
+                    <li>Premium Sponsor <span class="calc-price">(~€10.000)</span>*</li>
+                    <li>Anúncio (Página inteira) <span class="calc-price">(~€1.316)</span></li>
                 </ul>
             </div>
         </div>
+        <p style="font-size: 0.8em; margin-top: 1em;">*Valores em £ convertidos para € para fins de estimativa, com base no rácio de desconto do pacote.</p>
 
     </main>
 
