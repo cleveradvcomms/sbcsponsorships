@@ -102,14 +102,8 @@
             color: #6106AF;
             font-weight: 700;
             font-family: 'Figtree', sans-serif;
-            font-style: italic;
+            font-style: normal;
             font-size: 0.95em;
-        }
-        .list-value {
-            text-decoration: line-through;
-            color: #777;
-            font-size: 0.9em;
-            padding: 0 5px;
         }
 
         td li {
@@ -193,7 +187,7 @@
         .bar-group {
             display: flex;
             flex-direction: column;
-            align: center;
+            align-items: center;
             width: 45%;
         }
 
@@ -334,17 +328,16 @@
     <main>
         <h1>Análise de Patrocínio: <span class="highlight">SBC 2025 vs. 2026</span></h1>
         
-        <p>A análise abaixo detalha o **custo proporcional pago** por cada item nos pacotes de 2025 e 2026, com todos os valores convertidos para Euros (€).</p>
+        <p>A análise abaixo detalha o **custo proporcional (pago)** por cada item nos pacotes de 2025 e 2026, com todos os valores convertidos para Euros (€).</p>
         
         <div class="disclaimer">
-            <strong>Nota sobre os Cálculos:</strong> Os documentos de 2026 misturam moedas (`€`, `£`, `$`) e contêm inconsistências (itens de lista não somam ao total). Para calcular o valor proporcional de cada item em Euros, foi necessário:
+            <strong>Nota sobre os Cálculos:</strong> Os documentos da proposta (especialmente de 2026) misturam moedas (`€`, `£`, `$`) e contêm inconsistências (itens de lista não somam ao total do pacote). Para calcular o valor proporcional de cada item em Euros, foi necessário:
             <ol>
-                <li>Encontrar a taxa de câmbio implícita em cada pacote (ex: `Total € / Total £`).</li>
-                <li>Converter o valor de lista de cada item para Euros.</li>
-                <li>Calcular o rácio de desconto do pacote (Preço Pago € / Valor de Lista Total €).</li>
-                <li>Aplicar esse rácio a cada item.</li>
+                <li>Encontrar a taxa de câmbio implícita em cada pacote (ex: `Total € / Total £`) para converter todos os itens para Euros.</li>
+                <li>Calcular o "peso" de cada item dentro do "valor de lista" total do pacote.</li>
+                <li>Aplicar esse "peso" ao **preço final pago** para encontrar o custo proporcional de cada item.</li>
             </ol>
-            Os valores (`~€...`) são estimativas rigorosas baseadas nesta metodologia.
+            Os valores (`~€...`) são as estimativas mais precisas com base nesta metodologia, e a sua soma é igual ao total pago.
         </div>
 
         <h2>Tabela Comparativa: <span class="highlight">Custo Proporcional (Pago) por Item</span></h2>
@@ -361,29 +354,26 @@
                 <tr>
                     <td><strong>SBC Summit Rio</strong></td>
                     <td>
-                        <strong class="price-label">Preço Pago: €48.500</strong>
-                        <span class="proportional-value">Rácio de ~72.9%</span>
+                        <strong class="price-label">Preço Pago: €48.500,00</strong>
                         <ul>
-                            <li>Booth 9x6m (54 m²) <span class="list-value">(Lista: €38.500)</span> <span class="proportional-value">-> Custo: ~€28.078</span></li>
-                            <li>Stage Sponsor - Affiliate Leaders <span class="list-value">(Lista: €24.500)</span> <span class="proportional-value">-> Custo: ~€17.868</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: €3.500)</span> <span class="proportional-value">-> Custo: ~€2.553</span></li>
+                            <li>Booth 9x6m (54 m²) <span class="proportional-value">(Custo: €28.078,95)</span></li>
+                            <li>Stage Sponsor - Affiliate Leaders <span class="proportional-value">(Custo: €17.868,42)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.552,63)</span></li>
                             <li>Oportunidade de Speaker <span class="proportional-value">(Complimentary)</span></li>
                         </ul>
                     </td>
                     <td>
-                        <strong class="price-label">Pacote 1: €39.000</strong>
-                        <span class="proportional-value">Rácio de ~76.5%</span>
+                        <strong class="price-label">Pacote 1: €39.000,00</strong>
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="list-value">(Lista: ~€47.553)</span> <span class="proportional-value">-> Custo: ~€36.363</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: ~€3.446)</span> <span class="proportional-value">-> Custo: ~€2.635</span></li>
+                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Custo: €36.364,86)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.635,14)</span></li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
-                        <strong class="price-label">Pacote 2: €47.000</strong>
-                        <span class="proportional-value">Rácio de ~76.0%</span>
+                        <strong class="price-label">Pacote 2: €47.000,00</strong>
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="list-value">(Lista: €47.500)</span> <span class="proportional-value">-> Custo: ~€36.091</span></li>
-                            <li>1x Private Meeting Room <span class="list-value">(Lista: ~€10.910)</span> <span class="proportional-value">-> Custo: ~€8.289</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: ~€3.445)</span> <span class="proportional-value">-> Custo: ~€2.617</span></li>
+                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Custo: €36.092,24)</span></li>
+                            <li>1x Private Meeting Room <span class="proportional-value">(Custo: €8.289,39)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.618,37)</span></li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                     </td>
@@ -391,34 +381,30 @@
                 <tr>
                     <td><strong>SBC Summit Americas</strong></td>
                     <td>
-                        <strong class="price-label">Preço Pago: €70.760</strong>
-                        <span class="proportional-value">Rácio de ~73.3%</span>
+                        <strong class="price-label">Preço Pago: €70.760,00</strong>
                         <ul>
-                            <li>Booth 6x6m (Premium) <span class="list-value">(Lista: ~€29.982)</span> <span class="proportional-value">-> Custo: ~€21.975</span></li>
-                            <li>Stage 3 Sponsor - North America <span class="list-value">(Lista: ~€35.979)</span> <span class="proportional-value">-> Custo: ~€26.370</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="list-value">(Lista: ~€26.984)</span> <span class="proportional-value">-> Custo: ~€19.778</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: ~€3.598)</span> <span class="proportional-value">-> Custo: ~€2.637</span></li>
+                            <li>Booth 6x6m (Premium) <span class="proportional-value">(Custo: €21.975,16)</span></li>
+                            <li>Stage 3 Sponsor - North America <span class="proportional-value">(Custo: €26.370,19)</span></li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Custo: €19.777,64)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.637,02)</span></li>
                             <li>Participação em Painel <span class="proportional-value">(Complimentary)</span></li>
                         </ul>
                     </td>
                     <td>
-                        <strong class="price-label">Pacote Principal: €75.000</strong>
-                        <span class="proportional-value">Rácio de ~66.7% (Dados inconsistentes*)</span>
+                        <strong class="price-label">Pacote Principal: €75.000,00</strong>
                         <ul>
-                            <li>Gold Headline Sponsor <span class="list-value">(Lista: ~€36.736)</span> <span class="proportional-value">-> Custo: ~€24.491</span></li>
-                            <li>Stage Sponsor - North America <span class="list-value">(Lista: ~€36.162)</span> <span class="proportional-value">-> Custo: ~€24.108</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="list-value">(Lista: ~€30.422)</span> <span class="proportional-value">-> Custo: ~€20.281</span></li>
-                            <li>Speaker Panel Participation <span class="list-value">(Lista: ~€9.184)</span> <span class="proportional-value">-> Custo: ~€6.123</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: ~€4.592)</span> <span class="proportional-value">-> Custo: ~€3.061</span></li>
-                            <li>Anúncios <span class="list-value">(Valor em $)</span> <span class="proportional-value">-> (Custo em € não-calculável)</span></li>
+                            <li>Gold Headline Sponsor <span class="proportional-value">(Custo: €23.529,41)</span></li>
+                            <li>Stage Sponsor - North America <span class="proportional-value">(Custo: €23.161,76)</span></li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Custo: €19.485,29)</span></li>
+                            <li>Speaker Panel Participation <span class="proportional-value">(Custo: €5.882,35)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.941,18)</span></li>
                             <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
-                        <strong class="price-label">Pacote de Booth: €25.000</strong>
-                        <span class="proportional-value">Rácio de 78.1%</span>
+                        <strong class="price-label">Pacote de Booth: €25.000,00</strong>
                         <ul>
-                            <li>Booth 6x6m (Premium) <span class="list-value">(Lista: €32.000)</span> <span class="proportional-value">-> Custo: €25.000</span></li>
+                            <li>Booth 6x6m (Premium) <span class="proportional-value">(Custo: €25.000,00)</span></li>
                         </ul>
-                        <strong class="total-price">Custo Pago Equivalente 2025: €100.000</strong>
+                        <strong class="total-price">Custo Pago Equivalente 2025: €100.000,00</strong>
                     </td>
                 </tr>
                 <tr>
@@ -428,19 +414,16 @@
                         <p>(Não fez parte do acordo de 2025)</p>
                     </td>
                     <td>
-                        <strong class="price-label">Pacote 1: €40.000</strong>
-                        <span class="proportional-value">Rácio de ~65.8%</span>
+                        <strong class="price-label">Pacote 1: €40.000,00</strong>
                         <ul>
-                            <li>Stage 2 Sponsor <span class="list-value">(Lista: ~€28.679)</span> <span class="proportional-value">-> Custo: ~€18.868</span></li>
-                            <li>Stage 3 Sponsor <span class="list-value">(Lista: ~€28.679)</span> <span class="proportional-value">-> Custo: ~€18.868</span></li>
-                            <li>Supporting Event Sponsor <span class="list-value">(Lista: ~€3.441)</span> <span class="proportional-value">-> Custo: ~€2.264</span></li>
+                            <li>Stage 2 Sponsor <span class="proportional-value">(Custo: €18.867,92)</span></li>
+                            <li>Stage 3 Sponsor <span class="proportional-value">(Custo: €18.867,92)</span></li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.264,15)</span></li>
                         </ul>
-                        <strong class="price-label">Pacote 2: €28.700</strong>
-                        <span class="proportional-value">Rácio de ~65.8%</span>
+                        <strong class="price-label">Pacote 2: €28.700,00</strong>
                         <ul>
-                            <li>Stage 2 Sponsor <span class="list-value">(Lista: ~€27.375)</span> <span class="proportional-value">-> Custo: ~€18.015</span></li>
-                            <li>Premium Sponsor <span class="list-value">(Lista: ~€14.235)</span> <span class="proportional-value">-> Custo: ~€9.368</span></li>
-                            <li>Anúncio (Página inteira) <span class="list-value">(Lista: €2.000)</span> <span class="proportional-value">-> Custo: ~€1.316</span></li>
+                            <li>Stage 2 Sponsor <span class="proportional-value">(Custo: €18.881,58)</span></li>
+                            <li>Premium Sponsor (incl. Anúncio) <span class="proportional-value">(Custo: €9.818,42)</span></li>
                         </ul>
                     </td>
                 </tr>
@@ -502,21 +485,20 @@
         <div class="malta-packages">
             <div class="malta-card">
                 <h4>Pacote 1</h4>
-                <div class="price">€40.000</div>
+                <div class="price">€40.000,00</div>
                 <ul>
-                    <li>Patrocínio do Stage 2 <span class="proportional-value">(Custo: ~€18.868)</span></li>
-                    <li>Patrocínio do Stage 3 <span class="proportional-value">(Custo: ~€18.868)</span></li>
-                    <li>Supporting Event Sponsor <span class="proportional-value">(Custo: ~€2.264)</span></li>
+                    <li>Patrocínio do Stage 2 <span class="proportional-value">(Custo: €18.867,92)</span></li>
+                    <li>Patrocínio do Stage 3 <span class="proportional-value">(Custo: €18.867,92)</span></li>
+                    <li>Supporting Event Sponsor <span class="proportional-value">(Custo: €2.264,15)</span></li>
                 </ul>
             </div>
             
             <div class="malta-card">
                 <h4>Pacote 2</h4>
-                <div class="price">€28.700</div>
+                <div class="price">€28.700,00</div>
                  <ul>
-                    <li>Patrocínio do Stage 2 <span class="proportional-value">(Custo: ~€18.015)</span></li>
-                    <li>Premium Sponsor <span class="proportional-value">(Custo: ~€9.368)</span></li>
-                    <li>Anúncio (Página inteira) <span class="proportional-value">(Custo: ~€1.316)</span></li>
+                    <li>Patrocínio do Stage 2 <span class="proportional-value">(Custo: €18.881,58)</span></li>
+                    <li>Premium Sponsor (incl. Anúncio) <span class="proportional-value">(Custo: €9.818,42)</span></li>
                 </ul>
             </div>
         </div>
