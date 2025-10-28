@@ -28,6 +28,8 @@
 
         h1 { font-size: 2.5em; }
         h2 { font-size: 2em; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        h3 { font-size: 1.3em; margin-top: 2em; color: #6106AF;}
+
 
         p, li {
             font-size: 1em;
@@ -80,11 +82,11 @@
             color: #231372;
             font-size: 1.1em;
             display: block;
-            margin: 10px 0 5px 0;
+            margin: 15px 0 5px 0;
         }
         
         strong.warning {
-            color: #c1121f; /* Red for "No Booth" */
+            color: #c1121f; /* Red for emphasis */
             font-weight: 700;
         }
         
@@ -98,13 +100,25 @@
         }
 
         td li {
-            margin-bottom: 8px;
+            margin-bottom: 10px; /* Increased spacing */
             font-size: 0.95em;
         }
         td ul {
             padding-left: 20px;
             margin-top: 5px;
             margin-bottom: 15px;
+        }
+        /* Style for nested lists (sub-items) */
+         td ul ul {
+            padding-left: 25px; /* Indent sub-items further */
+            margin-top: 8px;
+            margin-bottom: 8px;
+            list-style-type: disc; /* Use discs for sub-items */
+        }
+         td ul ul li {
+            font-size: 0.9em; /* Slightly smaller font for sub-items */
+            margin-bottom: 5px;
+            color: #333; /* Slightly lighter text */
         }
 
 
@@ -160,6 +174,19 @@
         .sources a {
             font-weight: normal; /* To make it less prominent */
         }
+        
+        /* --- Analysis Section --- */
+        .analysis-section {
+             margin-top: 2.5em;
+             padding-top: 1.5em;
+             border-top: 2px solid #f0f0f0;
+        }
+         .analysis-section ul {
+            padding-left: 20px;
+         }
+         .analysis-section li {
+             margin-bottom: 10px;
+         }
 
 
     </style>
@@ -257,24 +284,81 @@
                     <td>
                         <strong class="price-label">Price Paid: €48,500.00</strong>
                         <ul>
-                            <li>9x6m Booth (54 sqm) <span class="proportional-value">(Cost: €28,078.95)</span></li>
-                            <li>Stage Sponsor - Affiliate Leaders <span class="proportional-value">(Cost: €17,868.42)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,552.63)</span></li>
-                            <li>Speaker Opportunity <span class="proportional-value">(Complimentary)</span></li>
+                            <li>**9x6m Booth (54 sqm)** <span class="proportional-value">(Cost: €28,078.95)</span>
+                                <ul>
+                                    <li>Premium located Booth space</li>
+                                    <li>Use stand space for scheduled meetings</li>
+                                    <li>Distribute promotional material and gifts</li>
+                                </ul>
+                            </li>
+                            <li>Stage Sponsor - Affiliate Leaders <span class="proportional-value">(Cost: €17,868.42)</span>
+                                <ul><li>Sponsor the main stage for the Affiliate Leaders Summit</li></ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,552.63)</span>
+                                <ul>
+                                    <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                    <li>Logo recognition on material, signage, sponsor walls</li>
+                                    <li>Logo recognition in official event programme</li>
+                                    <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                            <li>Speaker Opportunity <span class="proportional-value">(Complimentary)</span>
+                                <ul><li>Senior Exec to speak on a relevant Panel</li></ul>
+                            </li>
+                            <li>15 Complimentary Sponsor Admissions</li>
                         </ul>
                     </td>
                     <td>
                         <strong class="price-label">Package 1: €39,000.00</strong>
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Cost: €36,364.86)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,635.14)</span></li>
-                             </ul>
+                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Cost: €36,364.86)</span>
+                                <ul>
+                                    <li>Sponsor Large Conference Stage 1 (Leadership Discussions)</li>
+                                    <li>Logo/branding in center and around stage area</li>
+                                    <li>Logo/branding on conference photos</li>
+                                    <li>Logo/branding on official conference videos</li>
+                                </ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,635.14)</span>
+                                <ul>
+                                    <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                    <li>Logo recognition on material, signage, sponsor walls</li>
+                                    <li>Logo recognition in official event programme</li>
+                                    <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                            <li>8 Complimentary Sponsor Admissions</li>
+                            <li>**<strong class="warning">No Exhibition Booth included</strong>**</li>
+                        </ul>
                         <strong class="price-label">Package 2: €47,000.00</strong>
                         <ul>
-                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Cost: €36,092.24)</span></li>
-                            <li>1x Private Meeting Room <span class="proportional-value">(Cost: €8,289.39)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,618.37)</span></li>
-                             </ul>
+                            <li>Main Conference Stage Sponsor <span class="proportional-value">(Cost: €36,092.24)</span>
+                                <ul>
+                                    <li>Sponsor Large Conference Stage 1 (Leadership Discussions)</li>
+                                    <li>Logo/branding in center and around stage area</li>
+                                    <li>Logo/branding on conference photos</li>
+                                    <li>Logo/branding on official conference videos</li>
+                                </ul>
+                            </li>
+                            <li>**1x Private Meeting Room** <span class="proportional-value">(Cost: €8,289.39)</span>
+                                <ul>
+                                    <li>Private space (approx. 4x4m) on Mezzanine level</li>
+                                    <li>Rental during show open hours</li>
+                                    <li>Sign with sponsor logo outside</li>
+                                    <li>Table with 6 chairs provided</li>
+                                </ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,618.37)</span>
+                                <ul>
+                                     <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                     <li>Logo recognition on material, signage, sponsor walls</li>
+                                     <li>Logo recognition in official event programme</li>
+                                     <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                             <li>8 Complimentary Sponsor Admissions</li>
+                             <li>**<strong class="warning">No Exhibition Booth included (replaced by Meeting Room)</strong>**</li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
@@ -282,26 +366,94 @@
                     <td>
                         <strong class="price-label">Price Paid: €70,760.00</strong>
                         <ul>
-                            <li>6x6m Booth (Premium) <span class="proportional-value">(Cost: €21,975.16)</span></li>
-                            <li>Stage 3 Sponsor - North America <span class="proportional-value">(Cost: €26,370.19)</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Cost: €19,777.64)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,637.02)</span></li>
-                            <li>Panel Participation <span class="proportional-value">(Complimentary)</span></li>
+                            <li>**Combined Package:** Booth + Stage Sponsorships
+                                <ul>
+                                    <li>**6x6m Booth (Premium)** <span class="proportional-value">(Cost: €21,975.16)</span>
+                                        <ul>
+                                            <li>Premium located Booth space</li>
+                                            <li>Use stand space for scheduled meetings</li>
+                                            <li>Distribute promotional material and gifts</li>
+                                        </ul>
+                                    </li>
+                                    <li>Stage 3 Sponsor - North America <span class="proportional-value">(Cost: €26,370.19)</span>
+                                        <ul>
+                                            <li>Sponsor Main Stage for North America Panels</li>
+                                            <li>Logo appears on stage, photos, videos</li>
+                                        </ul>
+                                    </li>
+                                    <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Cost: €19,777.64)</span>
+                                        <ul>
+                                            <li>Exclusive sponsor of the stage</li>
+                                            <li>Logo appears on stage, photos, videos</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,637.02)</span>
+                                <ul>
+                                    <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                    <li>Logo recognition on material, signage, sponsor walls</li>
+                                    <li>Logo recognition in official event programme</li>
+                                    <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                            <li>Panel Participation <span class="proportional-value">(Complimentary)</span>
+                                <ul><li>Speak on a panel</li></ul>
+                            </li>
+                            <li>Complimentary Invites (Awards Dinner, 3 persons for C-level dinners)</li>
+                            <li>8 Sponsor Admissions</li>
                         </ul>
                     </td>
                     <td>
+                        <strong class="price-label">**Separated Packages:**</strong>
                         <strong class="price-label">Main Package: €75,000.00</strong>
                         <ul>
-                            <li>Gold Headline Sponsor <span class="proportional-value">(Cost: €23,529.41)</span></li>
-                            <li>Stage Sponsor - North America <span class="proportional-value">(Cost: €23,161.76)</span></li>
-                            <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Cost: €19,485.29)</span></li>
-                            <li>Speaker Panel Participation <span class="proportional-value">(Cost: €5,882.35)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,941.18)</span></li>
-                            <li><strong class="warning">No Exhibition Booth</strong></li>
+                            <li>**Gold Headline Sponsor (New Item)** <span class="proportional-value">(Cost: €23,529.41)</span>
+                                <ul>
+                                    <li>Mentioned as Gold headline sponsor (Sports Betting, Casino & iGaming Zones)</li>
+                                    <li>Logo/profile on website</li>
+                                    <li>Branding on PRINT & DIGITAL material (venue signage, zone signage, sponsor walls, program, website, app)</li>
+                                    <li>Double page advert in program</li>
+                                    <li>Full page advert in SBC Leaders Magazine</li>
+                                    <li>LinkedIn sponsored post</li>
+                                </ul>
+                            </li>
+                            <li>Stage Sponsor - North America <span class="proportional-value">(Cost: €23,161.76)</span>
+                                <ul>
+                                    <li>Sponsor Main Stage for North America Panels</li>
+                                     <li>Logo appears on stage, photos, videos</li>
+                                </ul>
+                            </li>
+                            <li>Affiliate Leaders Stage Sponsor <span class="proportional-value">(Cost: €19,485.29)</span>
+                                <ul>
+                                    <li>Exclusive sponsor of the stage</li>
+                                    <li>Logo appears on stage, photos, videos</li>
+                                </ul>
+                            </li>
+                            <li>Speaker Panel Participation <span class="proportional-value">(Cost: €5,882.35)</span>
+                                <ul><li>Speak on a panel</li></ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,941.18)</span>
+                                 <ul>
+                                    <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                    <li>Logo recognition on material, signage, sponsor walls</li>
+                                    <li>Logo recognition in official event programme</li>
+                                    <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                             <li>Complimentary Invites (Awards Dinner, 3 persons for C-level dinners)</li>
+                             <li>8 Sponsor Admissions</li>
+                            <li>**<strong class="warning">No Exhibition Booth included in Main Package</strong>**</li>
                         </ul>
                         <strong class="price-label">Booth Package: €25,000.00</strong>
                         <ul>
-                            <li>6x6m Booth (Premium) <span class="proportional-value">(Cost: €25,000.00)</span></li>
+                            <li>**6x6m Booth (Premium)** <span class="proportional-value">(Cost: €25,000.00)</span>
+                                 <ul>
+                                    <li>Premium located Booth space</li>
+                                    <li>Use stand space for scheduled meetings</li>
+                                    <li>Distribute promotional material and gifts</li>
+                                </ul>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -314,19 +466,90 @@
                     <td>
                         <strong class="price-label">Package 1: €40,000.00</strong>
                         <ul>
-                            <li>Stage 2 Sponsor <span class="proportional-value">(Cost: €18,867.92)</span></li>
-                            <li>Stage 3 Sponsor <span class="proportional-value">(Cost: €18,867.92)</span></li>
-                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,264.15)</span></li>
+                            <li>Stage 2 Sponsor <span class="proportional-value">(Cost: €18,867.92)</span>
+                                <ul>
+                                    <li>Logo on Stage, branded tables/cubes</li>
+                                    <li>Video(s) and logo on big screen during breaks</li>
+                                    <li>Logo on conference photos and videos</li>
+                                </ul>
+                            </li>
+                            <li>Stage 3 Sponsor <span class="proportional-value">(Cost: €18,867.92)</span>
+                                 <ul>
+                                    <li>Logo on Stage, branded tables/cubes</li>
+                                    <li>Video(s) and logo on big screen during breaks</li>
+                                    <li>Logo on conference photos and videos</li>
+                                </ul>
+                            </li>
+                            <li>Supporting Event Sponsor <span class="proportional-value">(Cost: €2,264.15)</span>
+                                <ul>
+                                    <li>Sponsor logo and profile on www.SBCevents.com</li>
+                                    <li>Logo recognition on material, signage, sponsor walls</li>
+                                    <li>Logo recognition in official event programme</li>
+                                    <li>Logo recognition in official event app</li>
+                                </ul>
+                            </li>
+                            <li>10 Complimentary Sponsor Admissions</li>
                         </ul>
                         <strong class="price-label">Package 2: €28,700.00</strong>
                         <ul>
-                            <li>Stage 2 Sponsor <span class="proportional-value">(Cost: €18,881.58)</span></li>
-                            <li>Premium Sponsor (incl. Advert) <span class="proportional-value">(Cost: €9,818.42)</span></li>
+                            <li>Stage 2 Sponsor <span class="proportional-value">(Cost: €18,881.58)</span>
+                                 <ul>
+                                    <li>Logo on Stage, branded tables/cubes</li>
+                                    <li>Video(s) and logo on big screen during breaks</li>
+                                    <li>Logo on conference photos and videos</li>
+                                </ul>
+                            </li>
+                            <li>Premium Sponsor (incl. Advert) <span class="proportional-value">(Cost: €9,818.42)</span>
+                                <ul>
+                                    <li>Mentioned as Premium Sponsor leading up to event</li>
+                                    <li>Premium branding on PRINT & DIGITAL material (venue signage, conference rooms, sponsor walls, program, website)</li>
+                                    <li>Full page advert in official printed program</li>
+                                    <li>VIP invitation for C-level Operator VIP dinner</li>
+                                </ul>
+                            </li>
+                             <li>10 Complimentary Sponsor Admissions</li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
+        
+        <div class="analysis-section">
+            <h2>Financial Analysis and Suggestion</h2>
+            <p>Comparing the 2025 agreement with the 2026 proposal reveals significant changes in package structure and cost, impacting the overall value proposition:</p>
+            <ul>
+                <li>
+                    <strong>SBC Summit Americas Price Increase:</strong> The most notable change is for SBC Summit Americas. In 2025, a single package costing €70,760 included a 6x6m Booth, North America Stage Sponsorship, and Affiliate Leaders Stage Sponsorship. In 2026, **these core items are split**. To get the equivalent (Main Package + Booth Package), the total cost increases to €100,000 (€75,000 + €25,000). This represents a **substantial increase of approximately 41% (€29,240)** for comparable core deliverables. The 2026 Main Package also introduces the "Gold Headline Sponsor" element, adding cost.
+                </li>
+                <li>
+                    <strong>SBC Summit Rio Value Change:</strong> The 2025 Rio package (€48,500) included a **large 9x6m (54 sqm) exhibition booth**. The 2026 Rio packages **do not include an exhibition booth**. Package 2 (€47,000) offers a small Private Meeting Room (16 sqm) instead. While the price is similar, the **value offered is considerably lower without the significant exhibition presence** provided by the large booth in 2025. Package 1 (€39,000) is cheaper but lacks any physical space (booth or meeting room).
+                </li>
+                <li>
+                    <strong>SBC Summit Malta (New Cost):</strong> This event represents an entirely new cost compared to 2025. The packages range from €28,700 to €40,000, adding to the total 2026 investment.
+                </li>
+                <li>
+                    <strong>Cost-Benefit Analysis:</strong> The 2025 deal appears to have offered significantly better value for money, especially concerning the inclusion of substantial booth spaces in both Rio and Americas within the package prices. The 2026 proposal significantly increases the cost for similar exposure in the Americas by unbundling the booth and decreases the value in Rio by removing the booth almost entirely.
+                </li>
+            </ul>
+
+            <h3>Suggestion:</h3>
+            <p>Based purely on the financial comparison and cost-benefit:</p>
+            <ul>
+                <li>
+                    <strong>Negotiate Americas Package:</strong> The primary negotiation point should be the SBC Summit Americas. Highlight the 41% effective price increase for equivalent core items (Booth + 2 Stages) due to the package restructuring. Aim to **re-bundle the 6x6m booth into the Main Package at a cost significantly lower** than the proposed €100,000 total. Question the added value vs. cost of the "Gold Headline Sponsor" component if budget is a concern.
+                </li>
+                <li>
+                    <strong>Evaluate Rio Needs:</strong> For SBC Summit Rio, assess the importance of a physical presence. Package 2 (€47k) is expensive considering it lacks the large booth from 2025. If a booth isn't crucial, Package 1 (€39k) offers main stage sponsorship visibility for less cost, but sacrifices physical presence entirely. The 2025 deal provided much better value here. **Challenge the value of Package 2 compared to the 2025 deal.**
+                </li>
+                <li>
+                    <strong>Assess Malta's Strategic Value:</strong> As a new event, decide if the added cost aligns with strategic goals. If budget is constrained due to the increased Americas cost, consider selecting the cheaper Package 2 (€28.7k) for Malta or potentially skipping it for 2026.
+                </li>
+                <li>
+                    <strong>Overall Strategy:** The 2026 proposal requires a significantly higher investment to achieve the same level of physical presence and stage sponsorship as in 2025, mainly due to the Americas package changes. Prioritize negotiation on the Americas deal to bring the cost down or obtain additional value. Re-evaluate the necessity of a large booth presence in Rio compared to 2025.
+                </li>
+            </ul>
+        </div>
+
 
         <div class="sources">
             <h3>Sources Used</h3>
