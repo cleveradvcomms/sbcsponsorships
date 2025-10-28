@@ -73,31 +73,29 @@
         /* --- Elementos de UI --- */
         .highlight {
             color: #20E2C8;
+        }
+        
+        strong.price-label {
+            color: #231372;
             font-size: 1.1em;
+            display: block;
+            margin-top: 10px;
         }
-
-        .button {
-            background-color: #20E2C8;
-            color: #231372;
-            padding: 1em 1.5em;
-            text-decoration: none;
-            font-family: 'Barlow', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 5px;
-            display: inline-block;
+        
+        strong.total-price {
+            color: #6106AF;
+            font-size: 1.2em;
+            display: block;
             margin-top: 1em;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-top: 1px solid #eee;
+            padding-top: 1em;
+        }
+        
+        strong.warning {
+            color: #c1121f; /* Vermelho para "Sem Booth" */
+            font-weight: 700;
         }
 
-        .button:hover {
-            color: #231372;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(32, 226, 200, 0.3);
-        }
 
         /* --- Tabelas --- */
         table {
@@ -110,7 +108,7 @@
 
         th, td {
             border: 1px solid #e0e0e0;
-            padding: 1em;
+            padding: 1.5em;
             text-align: left;
             vertical-align: top;
         }
@@ -120,24 +118,31 @@
             font-family: 'Barlow', sans-serif;
             text-transform: uppercase;
             color: #231372;
+            width: 30%;
+        }
+        
+        th:first-child {
+            width: 15%;
+            color: #6106AF;
         }
         
         td ul {
             padding-left: 20px;
             margin-top: 0;
-            margin-bottom: 0;
-        }
-        
-        cite {
-            font-style: normal;
-            font-size: 0.8em;
-            color: #777;
-            display: inline;
+            margin-bottom: 10px;
         }
 
         /* --- Gráfico --- */
-        .chart-container {
+        .chart-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
             margin-top: 2em;
+        }
+
+        .chart-container {
+            flex: 1;
+            min-width: 400px;
             padding: 2em;
             border: 1px solid #eee;
             border-radius: 8px;
@@ -151,6 +156,7 @@
             font-size: 1.3em;
             text-align: center;
             margin-bottom: 1.5em;
+            margin-top: 0;
         }
         
         .chart {
@@ -161,17 +167,18 @@
             border-left: 3px solid #ccc;
             border-bottom: 3px solid #ccc;
             padding-left: 1em;
+            padding-top: 1em;
         }
 
         .bar-group {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 40%;
+            width: 45%;
         }
 
         .bar {
-            width: 60px;
+            width: 70px;
             position: relative;
             text-align: center;
             transition: height 0.5s ease-out;
@@ -192,18 +199,50 @@
             margin-top: 10px;
             font-size: 1em;
             text-transform: uppercase;
+            text-align: center;
         }
 
         /* Cores do Gráfico */
         .bar-2025 { background-color: #231372; }
         .bar-2026 { background-color: #6106AF; }
         
-        /* Destaque para Custo Adicional */
+        /* Destaque para Custo Adicional (Americas) */
         .bar-2026-extra {
              background-color: #20E2C8;
         }
         .bar-2026-extra .value {
             color: #231372;
+        }
+        
+        /* Secção Malta */
+        .malta-packages {
+            display: flex;
+            justify-content: space-around;
+            gap: 2em;
+            margin-top: 1.5em;
+        }
+        .malta-card {
+            flex: 1;
+            border: 2px solid #231372;
+            border-radius: 8px;
+            padding: 1.5em;
+            background: #fdfdfd;
+        }
+        .malta-card h4 {
+            margin-top: 0;
+            color: #231372;
+            font-size: 1.3em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5em;
+        }
+        .malta-card .price {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #6106AF;
+            margin-bottom: 0.5em;
+        }
+        .malta-card ul {
+            padding-left: 20px;
         }
 
     </style>
@@ -237,8 +276,8 @@
                 <path id="Caminho_389-2" data-name="Caminho 389-2" class="cls-4" d="M452.05,129.69v18.74c0,1.99-1.61,3.6-3.6,3.6h-67.98c-1.99,0-3.6-1.61-3.6-3.6h0V42.63c0-1.99,1.61,3.6,3.6,3.6h20.9c1.99,0,3.6,1.61,3.6,3.6h0v83.46h43.47c1.99,0,3.6,1.61,3.61,3.59h0Z"/>
                 <path id="Caminho_392-2" data-name="Caminho 392-2" class="cls-4" d="M821.22,116.37l-2.89-5.46c17.91-12.4,22.38-36.97,9.99-54.88-7.37-10.65-19.49-17-32.44-17h-41.65c-1.99,0-3.6,1.61-3.6,3.6v105.8c0,1.99,1.61,3.6,3.6,3.6h20.81c2.04,0,3.7-1.66,3.7-3.7v-30.56c0-.77.63-1.4,1.4-1.4h8.8c.52,0,1,.29,1.24.75l.23.43,17.21,32.51c.64,1.22,1.91,1.98,3.29,1.98h23.18c2,0,3.62-1.63,3.62-3.63,0-.59-.15-1.17-.42-1.69l-16.06-30.34ZM805.1,85.93c-2.59,4.22-7.18,6.79-12.13,6.78h-14.24v-28.46h14.9v.02c7.86.37,13.93,7.03,13.56,14.89-.11,2.4-.83,4.73-2.09,6.78h0Z"/>
                 <path id="Caminho_390-2" data-name="Caminho 390-2" class="cls-4" d="M370.4,140.66c.53.99.24,2.22-.67,2.87-26.46,18.91-63.23,12.79-82.14-13.66-18.91-26.46-12.79-63.23,13.66-82.14,20.48-14.64,47.99-14.64,68.47,0,.91.66,1.19,1.88.67,2.88l-10.45,19.73c-.93,1.76-3.11,2.42-4.87,1.49-.2-.1-.38-.23-.55-.36-13.36-10.51-32.71-8.21-43.22,5.15-10.51,13.36-8.21,32.71,5.15,43.22,11.17,8.79,26.91,8.79,38.08,0,1.55-1.24,3.82-.99,5.06.57.14.17.26.36.37.56l10.44,19.73Z"/>
-                <path id="Caminho_388-2" data-name="Caminho 388-2" class="cls-4" d="M487.03,64.97v18.73h37.96c1.99,0,3.6,1.61,3.6,3.6v16.46c0,1.99-1.61,3.6-3.6,3.6h-37.96v18.73h49.15c1.99,0,3.6,1.61,3.6,3.6v18.74c0,1.99-1.61,3.6-3.6,3.6h-73.66c-1.99,0-3.6-1.61-3.6-3.6V42.63c0-1.99,1.61-3.6,3.6-3.6h73.66c1.99,0,3.6,1.61,3.6,3.6v18.65c0,2.04-1.65,3.69-3.69,3.69h-49.06Z"/>
-                <path id="Caminho_391-2" data-name="Caminho 391-2" class="cls-4" d="M691.37,64.97v18.73h37.96c1.99,0,3.6,1.61,3.6,3.6v16.46c0,1.99-1.61,3.6-3.6,3.6h-37.96v18.73h49.15c1.99,0,3.6,1.61,3.6,3.6v18.74c0,1.99-1.61,3.6-3.6,3.6h-73.66c-1.99,0-3.6-1.61-3.6-3.6V42.63c0-1.99,1.61-3.6,3.6-3.6h73.66c1.99,0,3.6,1.61,3.6,3.6v18.65c0,2.04-1.65,3.69-3.69,3.69h-49.06Z"/>
+                <path id="Caminho_388-2" data-name="Caminho 388-2" class="cls-4" d="M487.03,64.97v18.73h37.96c1.99,0,3.6,1.61,3.6,3.6v16.46c0,1.99-1.61,3.6-3.6,3.6h-37.96v18.73h49.15c1.99,0,3.6,1.61,3.6,3.6v18.74c0,1.99-1.61,3.6-3.6,3.6h-73.66c-1.99,0-3.6-1.61-3.6-3.6V42.63c0-1.99,1.61-3.6,3.6,3.6h73.66c1.99,0,3.6,1.61,3.6,3.6v18.65c0,2.04-1.65,3.69-3.69,3.69h-49.06Z"/>
+                <path id="Caminho_391-2" data-name="Caminho 391-2" class="cls-4" d="M691.37,64.97v18.73h37.96c1.99,0,3.6,1.61,3.6,3.6v16.46c0,1.99-1.61,3.6-3.6,3.6h-37.96v18.73h49.15c1.99,0,3.6,1.61,3.6,3.6v18.74c0,1.99-1.61,3.6-3.6,3.6h-73.66c-1.99,0-3.6-1.61-3.6-3.6V42.63c0-1.99,1.61-3.6,3.6,3.6h73.66c1.99,0,3.6,1.61,3.6,3.6v18.65c0,2.04-1.65,3.69-3.69,3.69h-49.06Z"/>
                 <g id="Grupo_29-2" data-name="Grupo 29-2">
                   <g class="cls-5">
                     <g id="Grupo_4-3" data-name="Grupo 4-3">
@@ -275,174 +314,177 @@
     <main>
         <h1>Análise de Patrocínio: <span class="highlight">SBC 2025 vs. 2026</span></h1>
         
-        [cite_start]<p>Esta é uma análise comparativa do acordo de patrocínio assinado para os eventos SBC de 2025 (Rio e Americas) [cite: 286, 329, 330] [cite_start]e a nova proposta para os eventos de 2026 (Rio, Malta e Americas)[cite: 5]. O objetivo é entender as diferenças de custo e entregáveis.</p>
+        <p>Esta é uma análise comparativa do acordo de patrocínio assinado para os eventos SBC de 2025 (Rio e Americas) e a nova proposta para os eventos de 2026 (Rio, Malta e Americas). O objetivo é entender as diferenças de custo e entregáveis.</p>
 
-        <h2>Acordo 2025: <span class="highlight">Pago e Entregue</span></h2>
-        [cite_start]<p>O acordo de 2025, assinado em 29/11/2024 [cite: 347, 352][cite_start], cobriu dois eventos principais com um custo total de <strong>€119.260</strong>[cite: 326].</p>
-
-        [cite_start]<h4>SBC Summit Rio 2025 (25-27 Fev 2025) [cite: 329]</h4>
-        <ul>
-            [cite_start]<li><strong>Preço Pago:</strong> €48.500 (desconto de €66.500)[cite: 289].</li>
-            <li><strong>Principais Entregáveis:</strong>
-                <ul>
-                    [cite_start]<li><strong>Booth Space 9x6m (54 m²)</strong> <cite>[cite: 289]</cite></li>
-                    [cite_start]<li><strong>Stage Sponsor - Affiliate Leaders Summit</strong> <cite>[cite: 295, 296]</cite></li>
-                    [cite_start]<li>Oportunidade de Speaker (Complimentary) <cite>[cite: 297, 298]</cite></li>
-                    [cite_start]<li>Supporting Event Sponsor <cite>[cite: 299]</cite></li>
-                    [cite_start]<li>15 Admissões Complimentary <cite>[cite: 304]</cite></li>
-                </ul>
-            </li>
-        </ul>
-
-        [cite_start]<h4>SBC Summit Americas 2025 (13-15 Mai 2025) [cite: 330]</h4>
-        <ul>
-            [cite_start]<li><strong>Preço Pago:</strong> €70.760 / £59.000 (desconto de £82.000)[cite: 309].</li>
-            <li><strong>Principais Entregáveis:</strong>
-                <ul>
-                    [cite_start]<li><strong>Booth 6x6m</strong> (Premium located) <cite>[cite: 311, 312]</cite></li>
-                    [cite_start]<li><strong>Stage 3 Sponsor - North America</strong> (Main Stage) <cite>[cite: 314, 316]</cite></li>
-                    [cite_start]<li><strong>Affiliate Leaders Stage Sponsor</strong> (Exclusivo) <cite>[cite: 321, 322]</cite></li>
-                    [cite_start]<li>Participação em Painel de Speaker (Complimentary) <cite>[cite: 326]</cite></li>
-                    [cite_start]<li>Convites para Jantares C-Level (3 pessoas) e Awards Dinner <cite>[cite: 326]</cite></li>
-                    [cite_start]<li>Supporting Event Sponsor <cite>[cite: 326]</cite></li>
-                    [cite_start]<li>8 Admissões Complimentary <cite>[cite: 326]</cite></li>
-                </ul>
-            </li>
-        </ul>
-
-        <h2>Proposta 2026: <span class="highlight">Novas Opções</span></h2>
-        <p>A proposta para 2026 inclui três eventos, com pacotes e preços distintos. Notavelmente, o evento de Malta é uma nova adição, e os pacotes para o Americas foram reestruturados.</p>
-
+        <h2>Tabela Comparativa: <span class="highlight">2025 vs. 2026</span></h2>
+        
         <table>
             <thead>
                 <tr>
                     <th>Evento</th>
-                    <th>Pacote</th>
-                    <th>Preço (Descontado)</th>
-                    <th>Principais Entregáveis</th>
+                    <th>2025 (Acordo Fechado)</th>
+                    <th>2026 (Nova Proposta)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    [cite_start]<td rowspan="2"><strong>SBC Summit Rio</strong><br>(Mar 2026) <cite>[cite: 31]</cite></td>
-                    <td>Pacote 1</td>
-                    [cite_start]<td>€39.000 <cite>[cite: 54]</cite></td>
+                    <td><strong>SBC Summit Rio</strong></td>
                     <td>
+                        <strong class="price-label">Custo: €48.500</strong>
                         <ul>
-                            [cite_start]<li>Main Conference Stage Sponsor (Stage 1) <cite>[cite: 56, 57]</cite></li>
-                            [cite_start]<li>Supporting Event Sponsor <cite>[cite: 62]</cite></li>
-                            [cite_start]<li>8 Admissões Complimentary <cite>[cite: 67]</cite></li>
-                            <li><strong>Sem Booth</strong></li>
+                            <li><strong>Booth Space 9x6m (54 m²)</strong></li>
+                            <li>Stage Sponsor - Affiliate Leaders Summit</li>
+                            <li>Oportunidade de Speaker</li>
+                            <li>15 Admissões Complimentary</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <strong class="price-label">Pacote 1: €39.000</strong>
+                        <ul>
+                            <li>Main Conference Stage Sponsor (Stage 1)</li>
+                            <li>8 Admissões Complimentary</li>
+                            <li><strong class="warning">Sem Booth de Exposição</strong></li>
+                        </ul>
+                        <strong class="price-label">Pacote 2: €47.000</strong>
+                        <ul>
+                            <li>Main Conference Stage Sponsor (Stage 1)</li>
+                            <li><strong>1x Private Meeting Room (4x4m)</strong></li>
+                            <li>8 Admissões Complimentary</li>
+                            <li><strong class="warning">Sem Booth de Exposição</strong></li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td>Pacote 2</td>
-                    [cite_start]<td>€47.000 <cite>[cite: 74]</cite></td>
+                    <td><strong>SBC Summit Americas</strong></td>
                     <td>
+                        <strong class="price-label">Custo: €70.760</strong>
                         <ul>
-                            [cite_start]<li>Main Conference Stage Sponsor (Stage 1) <cite>[cite: 76, 77]</cite></li>
-                            [cite_start]<li><strong>1x Private Meeting Room (4x4m)</strong> <cite>[cite: 82, 86]</cite></li>
-                            [cite_start]<li>Supporting Event Sponsor <cite>[cite: 97]</cite></li>
-                            [cite_start]<li>8 Admissões Complimentary <cite>[cite: 102]</cite></li>
-                            <li><strong>Sem Booth de Exposição</strong></li>
+                            <li><strong>Booth 6x6m (Premium)</strong></li>
+                            <li><strong>Stage 3 Sponsor - North America</strong></li>
+                            <li><strong>Affiliate Leaders Stage Sponsor</strong></li>
+                            <li>Participação em Painel de Speaker</li>
+                            <li>Convites C-Level Dinners (3 pessoas)</li>
+                            <li>8 Admissões Complimentary</li>
                         </ul>
+                    </td>
+                    <td>
+                        <strong class="price-label">Pacote Principal: €75.000</strong>
+                        <ul>
+                            <li>Gold Headline Sponsor</li>
+                            <li><strong>Stage Sponsor - North America</strong></li>
+                            <li><strong>Affiliate Leaders Stage Sponsor</strong></li>
+                            <li>Participação em Painel de Speaker</li>
+                            <li>Convites C-level dinners (3 pessoas)</li>
+                            <li><strong class="warning">Sem Booth de Exposição</strong></li>
+                        </ul>
+                        <strong class="price-label">Pacote de Booth: €25.000</strong>
+                        <ul>
+                            <li><strong>Booth 6x6m (Premium)</strong></li>
+                        </ul>
+                        <strong class="total-price">Custo Equivalente (Sponsor + Booth): €100.000</strong>
                     </td>
                 </tr>
                 <tr>
-                    [cite_start]<td rowspan="2"><strong>SBC Summit Malta</strong><br>(Abr 2026) <cite>[cite: 109, 111]</cite></td>
-                    <td>Pacote 1</td>
-                    [cite_start]<td>€40.000 <cite>[cite: 134]</cite></td>
+                    <td><strong>SBC Summit Malta</strong></td>
                     <td>
-                        <ul>
-                            [cite_start]<li>Stage 2 Sponsor <cite>[cite: 136]</cite></li>
-                            [cite_start]<li>Stage 3 Sponsor <cite>[cite: 147]</cite></li>
-                            [cite_start]<li>Supporting Event Sponsor <cite>[cite: 160]</cite></li>
-                            [cite_start]<li>10 Admissões Complimentary <cite>[cite: 170]</cite></li>
-                        </ul>
+                        <strong class="price-label">N/A</strong>
+                        <p>(Não fez parte do acordo de 2025)</p>
                     </td>
-                </tr>
-                <tr>
-                    <td>Pacote 2</td>
-                    [cite_start]<td>€28.700 <cite>[cite: 177]</cite></td>
                     <td>
+                        <strong class="price-label">Pacote 1: €40.000</strong>
                         <ul>
-                            [cite_start]<li>Stage 2 Sponsor <cite>[cite: 179]</cite></li>
-                            [cite_start]<li>Premium Sponsor <cite>[cite: 190]</cite></li>
-                            [cite_start]<li>Anúncio de página inteira <cite>[cite: 198]</cite></li>
-                            [cite_start]<li>Convite VIP C-level dinner <cite>[cite: 199]</cite></li>
-                            [cite_start]<li>10 Admissões Complimentary <cite>[cite: 200]</cite></li>
+                            <li>Stage 2 Sponsor</li>
+                            <li>Stage 3 Sponsor</li>
+                            <li>10 Admissões Complimentary</li>
                         </ul>
-                    </td>
-                </tr>
-                <tr>
-                    [cite_start]<td rowspan="2"><strong>SBC Summit Americas</strong><br>(Jun 2026) <cite>[cite: 207, 209]</cite></td>
-                    <td>Pacote Principal</td>
-                    [cite_start]<td>€75.000 <cite>[cite: 223]</cite></td>
-                    <td>
+                        <strong class="price-label">Pacote 2: €28.700</strong>
                         <ul>
-                            [cite_start]<li>Gold Headline Sponsor <cite>[cite: 225]</cite></li>
-                            [cite_start]<li><strong>Stage Sponsor - North America</strong> (Main Stage) <cite>[cite: 239, 240]</cite></li>
-                            [cite_start]<li><strong>Affiliate Leaders Stage Sponsor</strong> <cite>[cite: 246]</cite></li>
-                            [cite_start]<li>Participação em Painel de Speaker <cite>[cite: 253]</cite></li>
-                            [cite_start]<li>Convites C-level dinners (3 pessoas) <cite>[cite: 261]</cite></li>
-                            [cite_start]<li>8 Admissões Complimentary <cite>[cite: 267]</cite></li>
-                            <li><strong>Sem Booth</strong></li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pacote de Booth</td>
-                    [cite_start]<td>€25.000 <cite>[cite: 274]</cite></td>
-                    <td>
-                        <ul>
-                            [cite_start]<li><strong>Booth 6x6m</strong> (Premium located) <cite>[cite: 276, 278]</cite></li>
+                            <li>Stage 2 Sponsor</li>
+                            <li>Premium Sponsor</li>
+                            <li>Anúncio de página inteira</li>
+                            <li>10 Admissões Complimentary</li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>Análise Comparativa: <span class="highlight">Principais Diferenças</span></h2>
+        <h2>Análise Gráfica e <span class="highlight">Destaques</span></h2>
         
-        <h4>SBC Summit Rio (2025 vs 2026)</h4>
-        <p>A maior diferença no Rio é a <strong>ausência de um booth de exposição</strong> nos pacotes de 2026. Em 2025, pagámos €48.5k por um booth grande (9x6m) e o patrocínio do Affiliate Leaders Summit. As opções de 2026 são mais baratas (€39k e €47k), mas focam-se no "Main Conference Stage" e não incluem qualquer espaço de exposição (exceto uma pequena sala de reunião privada no Pacote 2). [cite_start]<cite>[cite: 56, 76, 82, 289, 295]</cite></p>
+        <p>A análise foca-se nas principais diferenças de custo e entregáveis para os eventos comparáveis (Rio e Americas) e apresenta o novo evento (Malta).</p>
 
-        <h4>SBC Summit Americas (2025 vs 2026)</h4>
-        <p>Esta é a mudança mais significativa. Em 2025, o pacote de <strong>€70.760</strong> incluía o Booth 6x6m, o patrocínio do Main Stage (North America) e o patrocínio do Affiliate Leaders Stage. [cite_start]<cite>[cite: 309, 311, 314, 321]</cite></p>
-        <p>Na proposta de 2026, estes itens foram separados:</p>
-        <ul>
-            <li>O "Pacote Principal" (<strong>€75.000</strong>) inclui os patrocínios dos dois palcos (Main Stage e Affiliate Leaders), mas <strong>NÃO inclui o booth</strong>. [cite_start]<cite>[cite: 223, 239, 246]</cite></li>
-            <li>O "Pacote de Booth" (<strong>€25.000</strong>) oferece o mesmo booth 6x6m. [cite_start]<cite>[cite: 274, 276]</cite></li>
-        </ul>
-        <p><strong>Conclusão:</strong> Para replicar os entregáveis de 2025 (Booth + 2 Stages) no Americas 2026, seria necessário adquirir ambos os pacotes, resultando num custo total de <strong>€100.000</strong> (€75.000 + €25.000). Isto representa um <strong>aumento de €29.240 (aprox. 41%)</strong> em relação ao custo de 2025 para o mesmo evento.</p>
-
-        <div class="chart-container">
-            <h3 class="chart-title">Comparação de Custo: SBC Summit Americas (Pacote Equivalente)</h3>
-            <div class="chart">
-                <div class="bar-group">
-                    <div class="bar bar-2025" style="height: 60%;">
-                        <div class="value">€70.760</div>
+        <div class="chart-section">
+            <div class="chart-container">
+                <h3 class="chart-title">Comparação de Custo: SBC Summit Americas<br>(Pacote Equivalente: Booth + Patrocínio de Palcos)</h3>
+                <p>Para replicar os entregáveis de 2025 (Booth + 2 Palcos) no Americas 2026, seria necessário adquirir ambos os pacotes (Principal + Booth), resultando num <strong>aumento de 41% (€29.240)</strong>.</p>
+                <div class="chart">
+                    <div class="bar-group">
+                        <div class="bar bar-2025" style="height: 70%;">
+                            <div class="value">€70.760</div>
+                        </div>
+                        <div class="bar-label">2025 (Total)</div>
                     </div>
-                    <div class="bar-label">2025 (Total)</div>
+                    
+                    <div class="bar-group">
+                        <div class="bar bar-2026-extra" style="height: 25%;">
+                             <div class="value">€25.000<br>(Booth)</div>
+                        </div>
+                        <div class="bar bar-2026" style="height: 75%;">
+                            <div class="value">€75.000<br>(Sponsor)</div>
+                        </div>
+                        <div class="bar-label">2026 (Total: €100.000)</div>
+                    </div>
                 </div>
-                
-                <div class="bar-group">
-                    <div class="bar bar-2026-extra" style="height: 21%;">
-                         <div class="value">€25.000 (Booth)</div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Comparação de Custo: SBC Summit Rio<br>(Pacotes de Topo)</h3>
+                <p>A maior diferença no Rio é a <strong>ausência de um booth de exposição</strong> nos pacotes de 2026. Em 2025, o pacote incluía um booth de 54m². O Pacote 2 de 2026, embora com preço similar, substitui o booth por uma sala de reunião de 16m².</p>
+                <div class="chart">
+                    <div class="bar-group">
+                        <div class="bar bar-2025" style="height: 100%;">
+                            <div class="value">€48.500</div>
+                        </div>
+                        <div class="bar-label">2025<br>(c/ Booth 54m²)</div>
                     </div>
-                    <div class="bar bar-2026" style="height: 64%;">
-                        <div class="value">€75.000 (Sponsorship)</div>
+                    
+                    <div class="bar-group">
+                        <div class="bar bar-2026" style="height: 96.9%;">
+                            <div class="value">€47.000</div>
+                        </div>
+                        <div class="bar-label">2026 - Pacote 2<br>(c/ Sala Reunião 16m², Sem Booth)</div>
                     </div>
-                    <div class="bar-label">2026 (Total: €100.000)</div>
                 </div>
             </div>
         </div>
-
-        <h4>SBC Summit Malta 2026</h4>
-        [cite_start]<p>Este é um evento novo na proposta[cite: 109], não tendo comparação com o acordo de 2025. Oferece dois níveis de patrocínio de palco e "Premium Sponsor" a €40k e €28.7k, respetivamente. [cite_start]<cite>[cite: 134, 177]</cite></p>
         
-        <a href="mailto:ras@sbcgaming.com" class="button">Contactar SBC para Negociar</a>
+        <h2>Proposta: <span class="highlight">SBC Summit Malta 2026 (Novo)</span></h2>
+        <p>Este é um evento novo na proposta, não tendo comparação com o acordo de 2025. A proposta inclui dois pacotes principais:</p>
+        
+        <div class="malta-packages">
+            <div class="malta-card">
+                <h4>Pacote 1</h4>
+                <div class="price">€40.000</div>
+                <ul>
+                    <li>Stage 2 Sponsor</li>
+                    <li>Stage 3 Sponsor</li>
+                    <li>Supporting Event Sponsor</li>
+                    <li>10 Admissões Complimentary</li>
+                </ul>
+            </div>
+            
+            <div class="malta-card">
+                <h4>Pacote 2</h4>
+                <div class="price">€28.700</div>
+                <ul>
+                    <li>Stage 2 Sponsor</li>
+                    <li>Premium Sponsor</li>
+                    <li>Anúncio de página inteira</li>
+                    <li>Convite VIP C-level dinner</li>
+                    <li>10 Admissões Complimentary</li>
+                </ul>
+            </div>
+        </div>
 
     </main>
 
